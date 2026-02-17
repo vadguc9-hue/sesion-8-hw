@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vadim | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">VADIM.DEV</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="dark-mode-toggle" class="theme-switch">
+            <span id="theme-icon">🌙</span>
+        </button>
+    </nav>
+
+    <header id="home" class="section">
+        <div class="hero-content">
+            <h1>Hi, I'm Vadim</h1>
+            <p class="typing-box">
+                <span id="typing-text"></span><span class="cursor">|</span>
+            </p>
+        </div>
+    </header>
+
+    <section id="skills" class="section">
+        <h2>Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill-item">
+                <div class="skill-info"><span>JavaScript</span> <span class="counter" data-target="85">0</span>%</div>
+                <div class="progress-line"><span data-width="85%"></span></div>
+            </div>
+            <div class="skill-item">
+                <div class="skill-info"><span>Python</span> <span class="counter" data-target="75">0</span>%</div>
+                <div class="progress-line"><span data-width="75%"></span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>My Work</h2>
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="steam">Steam</button>
+            <button class="filter-btn" data-filter="github">GitHub</button>
+        </div>
+
+        <div class="projects-grid">
+            <a href="https://github.com/vadguc9-hue" target="_blank" class="project-link-wrapper" data-category="github">
+                <div class="project-card">
+                    <div class="platform-tag">GITHUB</div>
+                    <h3>Mega Quiz Game</h3>
+                    <p>75-question interactive game. View code on GitHub.</p>
+                </div>
+            </a>
+
+            <a href="https://github.com/vadguc9-hue" target="_blank" class="project-link-wrapper" data-category="github">
+                <div class="project-card">
+                    <div class="platform-tag">GITHUB</div>
+                    <h3>Python Projects</h3>
+                    <p>Web tools and scripts. View my repositories.</p>
+                </div>
+            </a>
+
+            <a href="https://github.com/vadguc9-hue" target="_blank" class="project-link-wrapper" data-category="github">
+                <div class="project-card">
+                    <div class="platform-tag">GITHUB</div>
+                    <h3>Mystery Facts</h3>
+                    <p>Interactive puzzle game. View code on GitHub.</p>
+                </div>
+            </a>
+            
+            <a href="https://steamcommunity.com/profiles/76561199783362156/" target="_blank" class="project-link-wrapper" data-category="steam">
+                <div class="project-card">
+                    <div class="platform-tag">STEAM</div>
+                    <h3>Steam Profile</h3>
+                    <p>View my gaming achievements and community profile.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <form id="contact-form" novalidate>
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Name">
+                <span id="name-error" class="error-msg"></span>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Email">
+                <span id="email-error" class="error-msg"></span>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+            <p id="form-success" class="success-msg hidden">Sent Successfully! ✅</p>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

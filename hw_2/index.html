@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vadim's Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Vadim's Big Quiz</h1>
+        
+        <div id="setup-area">
+            <h3>Select a Theme:</h3>
+            <div class="menu-grid">
+                <button class="menu-btn geo" onclick="initQuiz('geography')">Geography</button>
+                <button class="menu-btn music" onclick="initQuiz('music')">Music</button>
+                <button class="menu-btn sports" onclick="initQuiz('sports')">Sports</button>
+                <button class="menu-btn science" onclick="initQuiz('science')">Science</button>
+                <button class="menu-btn movies" onclick="initQuiz('movies')">Movies</button>
+            </div>
+        </div>
+
+        <div id="game-area">
+            <p>Score: <span id="score-display">0</span> | Q: <span id="q-count">1</span>/15</p>
+            <h2 id="question-text"></h2>
+            <div id="options-box"></div>
+            <p id="feedback"></p>
+            <button id="next-btn">Next Question</button>
+        </div>
+
+        <div id="end-screen">
+            <h2>Finished!</h2>
+            <h1 id="final-result"></h1>
+            <button onclick="location.reload()">Restart</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

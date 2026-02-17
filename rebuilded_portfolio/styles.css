@@ -1,0 +1,45 @@
+:root {
+    --bg: #ffffff; --text: #1e293b; --card: #f8fafc; --accent: #6366f1; --error: #ef4444;
+}
+[data-theme="dark"] {
+    --bg: #0f172a; --text: #f8fafc; --card: #1e293b; --accent: #818cf8;
+}
+
+html { scroll-behavior: smooth; }
+body { background-color: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; transition: background 0.4s; }
+
+nav { display: flex; justify-content: space-around; padding: 1rem; background: var(--card); position: sticky; top: 0; z-index: 1000; }
+.nav-links { display: flex; list-style: none; gap: 20px; }
+.nav-links a { text-decoration: none; color: var(--text); font-weight: bold; }
+
+.section { padding: 80px 20px; text-align: center; }
+
+/* Typing Animation */
+.typing-box { font-size: 1.5rem; font-weight: 500; color: var(--accent); min-height: 1.6em; }
+.cursor { animation: blink 0.7s infinite; font-weight: bold; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Skills Bars */
+.skills-container { max-width: 500px; margin: 0 auto; text-align: left; }
+.progress-line { height: 10px; background: #ddd; border-radius: 10px; overflow: hidden; margin-bottom: 20px; }
+.progress-line span { height: 100%; width: 0; background: var(--accent); display: block; transition: 1.5s ease-out; }
+
+/* Project Grid */
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 900px; margin: 0 auto; }
+.project-link-wrapper { text-decoration: none; color: inherit; display: block; transition: transform 0.3s; }
+.project-link-wrapper:hover { transform: translateY(-10px); }
+.project-card { background: var(--card); padding: 30px; border-radius: 15px; position: relative; box-shadow: 0 4px 6px rgba(0,0,0,0.1); height: 100%; box-sizing: border-box; }
+
+.platform-tag { position: absolute; top: 10px; right: 10px; font-size: 0.7rem; background: var(--accent); color: white; padding: 3px 8px; border-radius: 5px; font-weight: bold; }
+
+.filter-btn { padding: 10px 20px; margin: 5px; border: 2px solid var(--accent); background: transparent; color: var(--text); cursor: pointer; border-radius: 20px; }
+.filter-btn.active { background: var(--accent); color: white; }
+.hide { display: none !important; }
+
+/* Form & UI */
+.form-group { margin-bottom: 15px; max-width: 400px; margin: 0 auto 15px; }
+input { width: 100%; padding: 12px; background: var(--card); color: var(--text); border: 1px solid #ccc; border-radius: 5px; box-sizing: border-box; }
+.error-msg { color: var(--error); font-size: 0.8rem; }
+.hidden { display: none; }
+.submit-btn { background: var(--accent); color: white; border: none; padding: 12px 25px; cursor: pointer; border-radius: 5px; font-weight: bold; }
+.theme-switch { background: var(--accent); border: none; color: white; padding: 10px; border-radius: 50%; cursor: pointer; }
